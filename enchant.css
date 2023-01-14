@@ -1,0 +1,50 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+@font-face {
+    font-family: 'minecraft enchantment';
+    src: url(./minecraft-enchantment.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Minecraft', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1{
+    margin: 40px;
+    margin-top: 50px;
+}
+h2{
+    margin-bottom: 20px;
+}
+#galax, #norm{
+    letter-spacing: 10px;
+    margin: 15px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+#norm{
+    border-bottom: 2px solid black;
+}
+#galax{
+    font-family: 'minecraft enchantment';
+}
+#keyboard{
+    text-align: center;
+    width: 100px;
+    outline: none;
+    border: none;
+    caret-color: transparent;
+    cursor: pointer;
+}
+
+
