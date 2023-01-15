@@ -1,9 +1,8 @@
 let galaxEl = document.querySelector('#galax')
-let normEl = document.querySelector('#norm')
 let wrongEl = document.querySelector('#wrong')
 let rightEl = document.querySelector('#right')
 let infoEl = document.querySelector('#info')
-let keyboardEl = document.querySelector('#keyboard')
+let normEl = document.querySelector('#norm')
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -11,21 +10,17 @@ function sleep(ms) {
 
 let wrong = 0
 let right = 0
-let bokstaver = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+let bokstaver = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 let bokstav = bokstaver[Math.floor(Math.random()*26)]
 galaxEl.innerHTML = bokstav
 document.addEventListener('keyup', async (e) =>{
-    keyboardEl.value = ""
-    normEl.innerHTML = e.code[3]
     bokstav = bokstaver[Math.floor(Math.random()*26)]
-    console.log(normEl.innerHTML, galaxEl.innerHTML, normEl.innerHTML == galaxEl.innerHTML)
-    if (normEl.innerHTML == galaxEl.innerHTML){
+    console.log(normEl.value, galaxEl.innerHTML, normEl.value == galaxEl.innerHTML)
+    if (normEl.value == galaxEl.innerHTML){
         infoEl.innerHTML = `Correct`
         galaxEl.innerHTML = bokstav
         right += 1
         rightEl.innerHTML = `You have ${right} right in a row`
-        await sleep(1000)
-        normEl.innerHTML = "-"
     }
     else{
         infoEl.innerHTML = `Wrong`
@@ -34,4 +29,5 @@ document.addEventListener('keyup', async (e) =>{
         rightEl.innerHTML = `You have ${right} right in a row`
         wrongEl.innerHTML = `You have ${wrong} mistakes`
     }
+    normEl.value = ""
 })

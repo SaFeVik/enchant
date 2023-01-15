@@ -17,33 +17,59 @@ body{
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    background-image: url('./bilder/bookshelves.png');
 }
 
 h1{
     margin: 40px;
     margin-top: 50px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
 }
 h2{
     margin-bottom: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
 }
+
+#enchantBilde{
+    position: absolute;
+    z-index: -1;
+    top: 175px;
+    width: 400px;
+}
+
 #galax, #norm{
     letter-spacing: 10px;
-    margin: 15px;
+    margin: 10px;
     font-size: 20px;
     padding-left: 10px;
 }
-#norm{
-    border-bottom: 2px solid black;
-}
+
 #galax{
     font-family: 'minecraft enchantment';
+    padding: 4px 3px 4px 16px;
+    background-color: rgb(255, 248, 173);
+    border-radius: 5px;
 }
-#keyboard{
+#norm{
     text-align: center;
-    outline: none;
+    outline: black;
     border: none;
+    width: 40px;
+    border-radius: 5px;
+    border-bottom: 2px solid black;
+    background: rgb(255, 246, 146);
     caret-color: transparent;
-    cursor: pointer;
 }
-
-
+#norm:focus{
+    background: rgb(255, 251, 209);
+    border-inline: 2px solid black;
+}
+p{
+    padding: 10px;
+    background: rgb(143, 255, 235);
+    border-radius: 5px;
+}
