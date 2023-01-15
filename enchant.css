@@ -21,8 +21,7 @@ body{
 }
 
 h1{
-    margin: 40px;
-    margin-top: 50px;
+    margin: 20px 40px 20px 40px;
     padding: 10px;
     background: white;
     border-radius: 10px;
@@ -37,13 +36,14 @@ h2{
 #enchantBilde{
     position: absolute;
     z-index: -1;
-    top: 210px;
+    top: 160px;
     width: 400px;
 }
 
-#galax, #norm{
+#galax, #norm, #galax1{
     letter-spacing: 10px;
     margin: 10px;
+    margin-inline: 2px;
     font-size: 30px;
     padding-left: 10px;
 }
@@ -54,24 +54,38 @@ h2{
     background-color: rgba(255, 255, 255, 0.952);
     border-radius: 5px;
     margin-bottom: 50px;
-    border-inline: 2px solid black;
-    border-top: 2px solid black;
+    color: rgb(0, 0, 0, 0.5);
+    border-radius: 0px 30px 30px 0px;
+    border: 2px solid black;
 }
-#norm{
-    text-align: center;
-    outline: black;
-    border: none;
-    width: 90px;
-    padding: 5px;
-    border-bottom: 2px solid black;
-    background: rgb(255, 255, 255);
-    border-inline: 2px solid black;
+#galax1{
+    font-family: 'minecraft enchantment';
+    padding: 10px 10px 10px 25px;
+    background-color: rgba(200, 255, 189, 0.952);
     border-radius: 5px;
     margin-bottom: 50px;
+    border: 2px solid black;
+}
+#wrapper{
+    display: flex;
+}
+
+#norm{
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 90px;
+    padding: 5px;
+    padding-left: 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 50px;
+
 }
 #norm:focus{
     background: rgba(255, 246, 146, 0);
-    border-inline: none;
+    outline: none;
+    border-radius: 0px;
 }
 p{
     padding: 10px;
@@ -81,11 +95,11 @@ p{
 
 @media (min-width: 726px){
     #enchantBilde{
-        top: 175px;
+        top: 130px;
     }
 }
 @media (max-width: 417px){
     #enchantBilde{
-        top: 245px;
+        top: 190px;
     }
 }
