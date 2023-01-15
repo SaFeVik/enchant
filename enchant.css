@@ -73,3 +73,14 @@ p{
     background: rgb(143, 255, 235);
     border-radius: 5px;
 }
+
+@media (min-width: 726px){
+    #enchantBilde{
+        top: 145px;
+    }
+}
+@media (max-width: 417px){
+    #enchantBilde{
+        top: 205px;
+    }
+}
